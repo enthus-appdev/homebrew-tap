@@ -27,10 +27,15 @@ class Atl < Formula
   end
 
   def install
-    bin.install Dir["atl-*"].first => "atl"
+    binary = if OS.mac?
+      Hardware::CPU.arm? ? "atl-darwin-arm64" : "atl-darwin-amd64"
+    else
+      Hardware::CPU.arm? ? "atl-linux-arm64" : "atl-linux-amd64"
+    end
+    bin.install binary => "atl"
   end
 
   test do
-    assert_match "atl", shell_output("#{bin}/atl --version")
+    assert_match version.to_s, shell_output("#{bin}/atl --version")
   end
 end

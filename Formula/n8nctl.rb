@@ -27,10 +27,15 @@ class N8nctl < Formula
   end
 
   def install
-    bin.install Dir["n8nctl-*"].first => "n8nctl"
+    binary = if OS.mac?
+      Hardware::CPU.arm? ? "n8nctl-darwin-arm64" : "n8nctl-darwin-amd64"
+    else
+      Hardware::CPU.arm? ? "n8nctl-linux-arm64" : "n8nctl-linux-amd64"
+    end
+    bin.install binary => "n8nctl"
   end
 
   test do
-    assert_match "n8nctl", shell_output("#{bin}/n8nctl --version")
+    assert_match version.to_s, shell_output("#{bin}/n8nctl version")
   end
 end

@@ -27,10 +27,15 @@ class Esq < Formula
   end
 
   def install
-    bin.install Dir["esq-*"].first => "esq"
+    binary = if OS.mac?
+      Hardware::CPU.arm? ? "esq-darwin-arm64" : "esq-darwin-amd64"
+    else
+      Hardware::CPU.arm? ? "esq-linux-arm64" : "esq-linux-amd64"
+    end
+    bin.install binary => "esq"
   end
 
   test do
-    assert_match "esq", shell_output("#{bin}/esq --version")
+    assert_match version.to_s, shell_output("#{bin}/esq --version")
   end
 end

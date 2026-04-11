@@ -29,7 +29,7 @@ Upgrade all installed formulas from this tap with `brew upgrade`.
 | [`esq`](Formula/esq.rb) | [`esq-cli`](https://github.com/enthus-appdev/esq-cli) | Query and inspect Elasticsearch clusters with environment switching |
 | [`n8nctl`](Formula/n8nctl.rb) | [`n8n-cli`](https://github.com/enthus-appdev/n8n-cli) | Manage n8n workflows — pull, push, execute, activate |
 
-All formulas are kept in sync automatically with each upstream release via GitHub Actions.
+Automated formula bumps on each upstream release are a planned follow-up — until then, formulas are bumped manually.
 
 ## Platforms
 
