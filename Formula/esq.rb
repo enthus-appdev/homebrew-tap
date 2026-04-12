@@ -5,21 +5,21 @@
 class Esq < Formula
   desc "Query and inspect Elasticsearch clusters across multiple environments"
   homepage "https://github.com/enthus-appdev/esq-cli"
-  version "1.1.2"
+  version "1.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/enthus-appdev/esq-cli/releases/download/v1.1.2/esq_1.1.2_darwin_amd64.tar.gz"
-      sha256 "468726ca4bafea0610741b5ff245082aeec75c157e4f7327b57949bd58e3a6a6"
+      url "https://github.com/enthus-appdev/esq-cli/releases/download/v1.1.3/esq_1.1.3_darwin_amd64.tar.gz"
+      sha256 "d19d52c5f24a2117697490640c980304d87920930455dc44229c0f546095cacb"
 
       define_method(:install) do
         bin.install "esq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/enthus-appdev/esq-cli/releases/download/v1.1.2/esq_1.1.2_darwin_arm64.tar.gz"
-      sha256 "2cfc3402bdb544d5ca6fbd2373376425075d2a8f547ef7426f45f3e59344e0cd"
+      url "https://github.com/enthus-appdev/esq-cli/releases/download/v1.1.3/esq_1.1.3_darwin_arm64.tar.gz"
+      sha256 "38fd6a7d24c46f07986c8a2946e2d67f874f0bfd0ccaa3e34c4da87467b51b47"
 
       define_method(:install) do
         bin.install "esq"
@@ -29,17 +29,15 @@ class Esq < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/enthus-appdev/esq-cli/releases/download/v1.1.2/esq_1.1.2_linux_amd64.tar.gz"
-      sha256 "2f25b90f9ab7660922f839e5cd441ccd00bbb5ce5e777c04bd4b92f15b16da00"
-
+      url "https://github.com/enthus-appdev/esq-cli/releases/download/v1.1.3/esq_1.1.3_linux_amd64.tar.gz"
+      sha256 "69aab50ef2ae6c18884787cc11750cc3d73d9ec4a00c950089e9f1c80e00337b"
       define_method(:install) do
         bin.install "esq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/enthus-appdev/esq-cli/releases/download/v1.1.2/esq_1.1.2_linux_arm64.tar.gz"
-      sha256 "d57e690b76e7736b9e2e8eedee51ec729cae40c75b0b69d5ca90066e43202f85"
-
+      url "https://github.com/enthus-appdev/esq-cli/releases/download/v1.1.3/esq_1.1.3_linux_arm64.tar.gz"
+      sha256 "eff0d58e03aff6f42e7d0868782d86ce52ec7da616f3126f93ad70b40b882797"
       define_method(:install) do
         bin.install "esq"
       end
