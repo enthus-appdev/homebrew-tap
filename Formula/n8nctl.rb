@@ -5,21 +5,21 @@
 class N8nctl < Formula
   desc "CLI for managing n8n workflows - pull, push, execute, activate"
   homepage "https://github.com/enthus-appdev/n8n-cli"
-  version "1.4.0"
+  version "1.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/enthus-appdev/n8n-cli/releases/download/v1.4.0/n8nctl_1.4.0_darwin_amd64.tar.gz"
-      sha256 "7bac2eca7eb06df8757a58b35667386de979ab0caedeb947e736b66ee6e215ba"
+      url "https://github.com/enthus-appdev/n8n-cli/releases/download/v1.5.0/n8nctl_1.5.0_darwin_amd64.tar.gz"
+      sha256 "92de54ffd94439a25d939992b71fe5b596e70476801d3e68d4221c2daa5e0d9f"
 
       define_method(:install) do
         bin.install "n8nctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/enthus-appdev/n8n-cli/releases/download/v1.4.0/n8nctl_1.4.0_darwin_arm64.tar.gz"
-      sha256 "328395579dd51522ef21617cf0e9e28fc50d2075c9b4cf35b6de90bc04542a2a"
+      url "https://github.com/enthus-appdev/n8n-cli/releases/download/v1.5.0/n8nctl_1.5.0_darwin_arm64.tar.gz"
+      sha256 "4b4de0b17ab8797149aa4b3fd9900e818e2242e01eaae1294b8ceefccb267faa"
 
       define_method(:install) do
         bin.install "n8nctl"
@@ -29,15 +29,15 @@ class N8nctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/enthus-appdev/n8n-cli/releases/download/v1.4.0/n8nctl_1.4.0_linux_amd64.tar.gz"
-      sha256 "9203f1d12e847063f570d5a00e0f8ed7902092df2d0c690cd1c29c795528befb"
+      url "https://github.com/enthus-appdev/n8n-cli/releases/download/v1.5.0/n8nctl_1.5.0_linux_amd64.tar.gz"
+      sha256 "4c004a48060854b024b4ad74d7c11961b11ce55554155791959a3c1380aa066e"
       define_method(:install) do
         bin.install "n8nctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/enthus-appdev/n8n-cli/releases/download/v1.4.0/n8nctl_1.4.0_linux_arm64.tar.gz"
-      sha256 "21758cce3bf0ab85be5f4636a58d278b6641cb6d9de15068e33b0e201ab5901d"
+      url "https://github.com/enthus-appdev/n8n-cli/releases/download/v1.5.0/n8nctl_1.5.0_linux_arm64.tar.gz"
+      sha256 "06d0af84644c6f92df250c9ed14af93bcea9b76a17045884c8ede53378019a57"
       define_method(:install) do
         bin.install "n8nctl"
       end
