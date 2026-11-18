@@ -5,21 +5,21 @@
 class Atl < Formula
   desc "Jira and Confluence CLI - a CLI alternative to the Atlassian MCP"
   homepage "https://github.com/enthus-appdev/atl-cli"
-  version "1.15.0"
+  version "1.15.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/enthus-appdev/atl-cli/releases/download/v1.15.0/atl_1.15.0_darwin_amd64.tar.gz"
-      sha256 "f70d6249a47739b068911db38cd88025091798f7a0b1002eb14316d11ce3bb3a"
+      url "https://github.com/enthus-appdev/atl-cli/releases/download/v1.15.1/atl_1.15.1_darwin_amd64.tar.gz"
+      sha256 "70db5a3d5dabe1c3a91f50ff1821efc6d069fe7924d1126667280931fdaf5a5f"
 
       define_method(:install) do
         bin.install "atl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/enthus-appdev/atl-cli/releases/download/v1.15.0/atl_1.15.0_darwin_arm64.tar.gz"
-      sha256 "6357a6bcd8d22d216fe73ddf15cc52296519ca8032087b3e06e2079f433f76e7"
+      url "https://github.com/enthus-appdev/atl-cli/releases/download/v1.15.1/atl_1.15.1_darwin_arm64.tar.gz"
+      sha256 "41d0656386fbd21d311583df18df001d7887cbbc5206d9aba91592c72dbda524"
 
       define_method(:install) do
         bin.install "atl"
@@ -29,15 +29,15 @@ class Atl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/enthus-appdev/atl-cli/releases/download/v1.15.0/atl_1.15.0_linux_amd64.tar.gz"
-      sha256 "101e9c710714e4abe4ff960ba37ac3f31b358ce84b0c0e8af4dbc2236e239955"
+      url "https://github.com/enthus-appdev/atl-cli/releases/download/v1.15.1/atl_1.15.1_linux_amd64.tar.gz"
+      sha256 "04dd0f3498b90ffe0d54c2ed53522914f3954c9197ebcd7a292345f5bc472eae"
       define_method(:install) do
         bin.install "atl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/enthus-appdev/atl-cli/releases/download/v1.15.0/atl_1.15.0_linux_arm64.tar.gz"
-      sha256 "6bba139ae92e034392e0d77e9cc9a6ddbfa22ecc6df535242fb0cbc1afc0f911"
+      url "https://github.com/enthus-appdev/atl-cli/releases/download/v1.15.1/atl_1.15.1_linux_arm64.tar.gz"
+      sha256 "0e45f97f857217a78c4a833fe40e463073152c40b9efa4d859245ba0a9ab48a5"
       define_method(:install) do
         bin.install "atl"
       end
